@@ -1,9 +1,13 @@
 <!---
 	If you leave these settings commented out, Wheels will set the data source name to the same name as the folder the application resides in.
-	<cfset set(dataSourceName="")>
+	
 	<cfset set(dataSourceUserName="")>
 	<cfset set(dataSourcePassword="")> 
 --->
+
+<!--- Datasource --->
+
+<cfset set(dataSourceName="grandlife")>
 
 <!---
 	If you leave this setting commented out, Wheels will try to determine the URL rewrite capabilities automatically.
