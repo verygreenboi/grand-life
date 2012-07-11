@@ -1,1 +1,3 @@
-<cfoutput>#yemmy#</cfoutput>
+<cfparam name="user">
+<cfoutput>
+</cfoutput>

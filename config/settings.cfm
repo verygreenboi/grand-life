@@ -9,6 +9,8 @@
 
 <cfset set(dataSourceName="grandlife")>
 
+<cfset application.pluginManager.requirePassword = false>
+
 <!---
 	If you leave this setting commented out, Wheels will try to determine the URL rewrite capabilities automatically.
 	The URLRewriting setting can bet set to "On", "Partial" or "Off".
