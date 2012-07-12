@@ -1,0 +1,56 @@
+.pump-up {
+color: #333;
+margin: 70px 22px 35px;
+font-weight: bold;
+text-align: center;
+line-height: 40px;
+}
+
+.full-search-bar{
+	width:72%;
+	margin:0 auto 38px;
+	position:relative
+}
+.full-search-bar form{
+	padding:0;
+	margin:0;
+	position:relative;
+	overflow:hidden
+}
+.full-search-bar form .clearfix{margin:0}
+.full-search-bar form input[type=text]{
+	float:left;
+	height:30px;
+	font-size:20px;
+	line-height:24px;
+	-webkit-border-radius:6px 0 0 6px;
+	-moz-border-radius:6px 0 0 6px;
+	border-radius:6px 0 0 6px;
+	border-right:0;
+	width:95%;
+	margin-bottom:0
+}
+.full-search-bar form button[type=submit]{
+	position:absolute;
+	right:0;
+	top:0;
+	width:46px;
+	height:41px;
+	-webkit-border-radius:0 6px 6px 0;
+	-moz-border-radius:0 6px 6px 0;
+	border-radius:0 6px 6px 0}
+.full-search-bar .search-input-item{
+	padding:10px;
+	-webkit-border-radius:9px;
+	-moz-border-radius:9px;
+	border-radius:9px
+}
+
+#logo {
+  width: 320px;
+  height: 80px;
+  background: url(../images/logo.png);
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}

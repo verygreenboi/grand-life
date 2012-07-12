@@ -5,11 +5,32 @@
         <h3>Sign In</h3>
       </div>
       <div class="modal-body">
-        
+      <form class="well">
+        <fieldset>
+			<div class="control-group">
+	            <label class="control-label" for="email">Email</label>
+	            <div class="controls">
+		            <div class="input-prepend">
+			            <span class="add-on">@</span>
+	              		<input class="input-xlarge focused" id="email" type="email">
+					</div>
+	            </div>
+	        </div>
+	        <div class="control-group">
+	            <label class="control-label" for="password">Password</label>
+	            <div class="controls">
+	              	<div class="input-prepend">
+		              	<span class="add-on">P</span>
+		              	<input class="input-xlarge focused" id="password" type="password">
+					</div>
+	            </div>
+	        </div>
+		</fieldset> 
       </div>
       <div class="modal-footer">
-        <a href="##" class="btn" data-dismiss="modal" data-bitly-type="bitly_hover_card">Close</a>
-        <a href="##" class="btn btn-primary" data-bitly-type="bitly_hover_card">Save changes</a>
+        <a href="##" class="btn" data-dismiss="modal">Close</a>
+        <button class="btn btn-primary" type="submit">Sign in</button>
       </div>
     </div>
+	</form>
 </cfoutput>
