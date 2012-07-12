@@ -15,48 +15,7 @@
 	    <![endif]-->
 	</head>
 	<body>
-	<div class="containers">	<!--- Header --->
-		<header class="navbar navbar-fixed-top">
-		
-			<div class="navbar-inner">
-				<nav class="container-fluid">
-					<h1 class="btn btn-navbar">Logo goes here</h1>
-					
-					<cfif params.controller eq "Home" AND params.action eq "index">
-					<div class="well modal hide fade" id="myModal">
-						#includePartial("/partials/homehead")#
-					</div>
-					<div class="btn-group pull-right">
-						<a class="btn" data-toggle="modal" href="##myModal" >Sign in</a>
-					</div>
-					<cfelseif params.controller eq "Home" and params.action eq "login">
-							#includePartial("/partials/loginhead")#
-					</cfif>
-					
-				</nav>
-			</div>
-		</header>
-		
-		<!--- /Header --->
-		
-		<!--- Section: Main content --->
-		<section class="main">
-			<cfoutput>#includeContent()#</cfoutput>
-		</section>
-		
-		<!--- /Section: Main content --->
-		
-		<!--- Aside: Trend --->
-		
-		<aside>
-			
-		</aside>
-		<!--- /Aside --->
-		
-		<!--- Footer --->
-		
-		<footer>
-		</footer></div>
+		#includePartial("/partials/nav")#
 		#javaScriptIncludeTag("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")#
 		#javaScriptIncludeTag("bootstrap.min")#
 	</body>
