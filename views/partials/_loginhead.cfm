@@ -5,7 +5,7 @@
         <h3>Sign In</h3>
       </div>
       <div class="modal-body">
-      <form class="well">
+      #startFormTag(action="Signin", class="well")#
         <fieldset>
 			<div class="control-group">
 	            <label class="control-label" for="email">Email</label>
@@ -26,11 +26,13 @@
 	            </div>
 	        </div>
 		</fieldset> 
+		<a href="##">Forgot Your password?</a>
+		#linkTo(action="register", text="New User?", class="register")#
       </div>
       <div class="modal-footer">
         <a href="##" class="btn" data-dismiss="modal">Close</a>
         <button class="btn btn-primary" type="submit">Sign in</button>
       </div>
     </div>
-	</form>
+	#endFormTag()#
 </cfoutput>
