@@ -7,7 +7,7 @@
 
 <!--- Datasource --->
 
-<cfset set(dataSourceName="grandlife")>
+<cfset set(dataSourceName="tstingtk_grand")>
 
 <cfset application.pluginManager.requirePassword = false>
 

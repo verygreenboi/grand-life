@@ -16,10 +16,10 @@
 	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	    <![endif]-->
 	</head>
-	<body>
+	<body class="gray">
 		<header>
-			#includePartial("/partials/nav")#
-			<section class="container">
+			<div class="container-fluid"></div>
+			<section class="container-fluid">
 			<div class="content-inner">
 				  <h1 id="logo" class="pump-up">Grand life social trading site.</h1>
 					<cfif params.controller eq "home" and params.action eq "index">
@@ -31,22 +31,19 @@
 		
 		<!--- Main content --->
 		<section class="container-fluid">
-			<div class="row-fluid">
+			<div class="row-fluid dash">
 				#includeContent()#
-				<div class="span3 visible-desktop">
+				<!--- <div class="span3 visible-desktop">
 					<p>Trending Sales</p>
-				</div>
+				</div> --->
 			</div>
 		</section>
 		<footer class="container-fluid">
-			<div class="row">
-				<div class="span3 visible-phone">#linkTo(action="login", text="Sign In")#</div>
-			</div>
+			
 		</footer>
 		
 		#javaScriptIncludeTag("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")#
 		#javaScriptIncludeTag("bootstrap.min")#
-		#javaScriptIncludeTag("http://jzaefferer.github.com/jquery-validation/jquery.validate.js")#
 		<script type="text/javascript">
 		  $(document).ready(function(){
 				$('input').hover(function()

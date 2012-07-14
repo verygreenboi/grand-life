@@ -61,3 +61,53 @@ line-height: 40px;
 	margin:0;
 	padding: 0 0 0 25%;
 }
+
+.gray{
+	background-color: #F1F1F1;
+}
+
+.dash{
+	height: 700px;
+}
+
+body {
+    padding-bottom: 40px;
+    padding-top: 60px;
+}
+
+.sidebar-nav {
+    padding: 9px 0;
+}
+
+.sidebar-nav-fixed {
+    position:fixed;
+    top:243px;
+    width:21.97%;
+}
+
+@media (max-width: 767px) {
+    .sidebar-nav-fixed {
+        width:auto;
+    }
+}
+
+@media (max-width: 979px) {
+    .sidebar-nav-fixed {
+        position:static;
+        width: auto;
+    }
+}
+ 
+ /* for demo purposes (fixed top navbar placement in the fiddle. Ok to remove */
+ 
+@media (max-width: 767px) {
+    body {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 979px) {
+    body {
+        padding-top: 0;
+    }
+}

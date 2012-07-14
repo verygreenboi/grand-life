@@ -12,7 +12,7 @@
 	            <div class="controls">
 		            <div class="input-prepend">
 			            <span class="add-on">@</span>
-	              		<input class="input-xlarge focused" id="email" type="email">
+	              		<input class="input-xlarge focused" id="user-email" name="user[email]" type="email">
 					</div>
 	            </div>
 	        </div>
@@ -21,7 +21,7 @@
 	            <div class="controls">
 	              	<div class="input-prepend">
 		              	<span class="add-on">P</span>
-		              	<input class="input-xlarge focused" id="password" type="password">
+		              	<input class="input-xlarge focused" id="user-password" type="password" name="user[password]">
 					</div>
 	            </div>
 	        </div>

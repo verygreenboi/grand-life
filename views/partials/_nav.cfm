@@ -13,7 +13,7 @@
 				<!--- Login Button --->
 				<!--- TODO: Add condition here to check login state and change the button accordingly--->
 				<div class="btn-group pull-right">
-					<a data-toggle="modal" href="##myModal" class="btn dropdown-toggle"><i class="icon-user"></i>Sign In<span class="caret"></span></a>
+					<a data-toggle="modal" href="##myModal" class="hidden-phone btn dropdown-toggle"><i class="icon-user"></i>Sign In<span class="caret"></span></a>
 				</div>
 				</div>
 			</div>
