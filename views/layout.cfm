@@ -44,7 +44,11 @@
 			</div>
 		</footer>
 		
-		#javaScriptIncludeTag("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")#
+		<cfif get("environment") is "design">
+			#javascriptIncludeTag("jquery-1.7.2.min")#
+		<cfelse>
+			#javaScriptIncludeTag("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")#
+		</cfif>
 		#javaScriptIncludeTag("bootstrap.min")#
 		#javaScriptIncludeTag("http://jzaefferer.github.com/jquery-validation/jquery.validate.js")#
 		<script type="text/javascript">

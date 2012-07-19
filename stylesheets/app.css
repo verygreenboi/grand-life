@@ -55,6 +55,31 @@ line-height: 40px;
   overflow: hidden;
 }
 
+.profileImg img{
+	max-height: 150px;
+	max-width: 200px;
+}
+
+.icon32 {
+float: left;
+height: 34px;
+margin: 7px 8px 0 0;
+width: 36px;
+}
+
+.icon32{
+background-color: transparent;
+background-repeat: no-repeat;
+}
+
+.icon32.icon-post, #icon-edit, #icon-post, .icon32.icon-dashboard, #icon-index, .icon32.icon-media, #icon-upload, .icon32.icon-links, #icon-link-manager, #icon-link, #icon-link-category, .icon32.icon-page, #icon-edit-pages, #icon-page, .icon32.icon-comments, #icon-edit-comments, .icon32.icon-appearance, #icon-themes, .icon32.icon-plugins, #icon-plugins, .icon32.icon-users, #icon-users, #icon-profile, #icon-user-edit, .icon32.icon-tools, #icon-tools, #icon-admin, .icon32.icon-settings, #icon-options-general, .icon32.icon-site, #icon-ms-admin {
+background-image: url(../images/icons32.png);
+}
+
+.icon32.icon-users, #icon-users, #icon-profile, #icon-user-edit {
+background-position: -600px -5px;
+}
+
 /*Cat inner*/
 
 .cat-inner{
@@ -72,7 +97,7 @@ line-height: 40px;
 
 body {
     padding-bottom: 40px;
-    padding-top: 60px;
+    padding-top: 0;
 }
 
 .sidebar-nav {

@@ -41,15 +41,35 @@
 		<footer class="container-fluid">
 			
 		</footer>
-		
-		#javaScriptIncludeTag("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")#
+		<cfif get("environment") is "design">
+			#javascriptIncludeTag("jquery-1.7.2.min")#
+		<cfelse>
+			#javaScriptIncludeTag("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")#
+		</cfif>
 		#javaScriptIncludeTag("bootstrap.min")#
+		#javaScriptIncludeTag("http://malsup.github.com/jquery.form.js")#
+		<!--- #javaScriptIncludeTag("http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js")#
+		#javaScriptIncludeTag("http://blueimp.github.com/JavaScript-Canvas-to-Blob/canvas-to-blob.min.js")#
+		#javaScriptIncludeTag("http://blueimp.github.com/Bootstrap-Image-Gallery/js/bootstrap-image-gallery.min.js")#
+		#javaScriptIncludeTag("http://blueimp.github.com/jQuery-File-Upload/js/jquery.iframe-transport.js")#
+		#javaScriptIncludeTag("http://blueimp.github.com/jQuery-File-Upload/js/jquery.fileupload.js")#
+		#javaScriptIncludeTag("http://blueimp.github.com/jQuery-File-Upload/js/jquery.fileupload-fp.js")#
+		#javaScriptIncludeTag("http://blueimp.github.com/jQuery-File-Upload/js/jquery.fileupload-ui.js")#
+		#javaScriptIncludeTag("http://blueimp.github.com/jQuery-File-Upload/js/locale.js")#
+		#javaScriptIncludeTag("http://blueimp.github.com/jQuery-File-Upload/js/main.js")# --->		
 		<script type="text/javascript">
 		  $(document).ready(function(){
 				$('input').hover(function()
 				{
 				$(this).popover('show')
 				});
+				$('##submitImage').bind('click', function(){
+				  		$(".preview").html('');
+						$(".preview").html('<img src="images/loader.gif" alt="Uploading...."//>');
+						$("##fileupload").ajaxForm({
+						target: '.preview'
+						}).submit();
+					});
 			});
 		  </script>	
 	</body>
