@@ -1,6 +1,12 @@
 <cfcomponent extends="Model" output="false">
 	<cffunction name="init">
 		
+		<!--- associations --->
+		
+		<cfset hasMany("products")>
+		
+		<!--- Validation --->
+		
 		<cfset validatesPresenceOf("firstname,lastname,email,password,sex")>
 		<cfset validatesUniquenessOf("email")>
 		<cfset validatesFormatOf(property="email", type="email")>

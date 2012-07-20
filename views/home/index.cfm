@@ -1,4 +1,5 @@
 <cfparam name="user">
+	<cfoutput>
 		<div class="span9">
 			<div class="cat-inner">
 				<div class="row-fluid">
@@ -14,4 +15,4 @@
 				</div>
 			</div>
 		</div>
-		
+	</cfoutput>		

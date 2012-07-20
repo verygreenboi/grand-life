@@ -1,6 +1,11 @@
 <cfcomponent extends="Controller" output="false">
 	
 	<cffunction name="dash">
+		<cfset number = generateSsccAsn(serialSequence='000000002', distributorId='223456')>
+		<cfset number = right(number, 16)>
+		<cfset number = left(number, 6)>
+		<cfdump var="#right(number, 16)#" abort="true">
+		
 		<cfset pageTitle = "Social Trading">
 		<cfset user = model("user").findOne(where="id='#session.user.id#'")>
 	</cffunction>
@@ -26,5 +31,8 @@
 		<cfset user.update(params.user)>
 
 		<cfset redirectTo(action="dash")>
+	</cffunction>
+	
+	<cffunction name="checkRole">
 	</cffunction>
 </cfcomponent>
