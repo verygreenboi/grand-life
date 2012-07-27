@@ -1,6 +1,12 @@
+body{
+	font-family: 'Droid Sans', sans-serif;
+}
+.content-inner{
+	position: relative;
+}
 .pump-up {
 color: #333;
-margin: 70px 22px 35px;
+margin: 70px 22px 0;
 font-weight: bold;
 text-align: center;
 line-height: 40px;
@@ -45,7 +51,14 @@ line-height: 40px;
 	-moz-border-radius:9px;
 	border-radius:9px
 }
+.logo{
+	padding: 0 0 0 30%;
+}
 
+.logo p{
+	padding: 0 0 0 4%;
+	color: #1C4D0A;
+}
 #logo {
   width: 320px;
   height: 80px;
@@ -53,6 +66,14 @@ line-height: 40px;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.info{
+	
+}
+
+.cat h4{
+	text-align: center;
 }
 
 .profileImg img{
@@ -96,7 +117,6 @@ background-position: -600px -5px;
 }
 
 body {
-    padding-bottom: 40px;
     padding-top: 0;
 }
 
@@ -110,10 +130,35 @@ body {
     width:21.97%;
 }
 
+footer {
+	background: #333;
+	min-height: 220px;
+}
+
+footer .hidden-phone{
+	padding: 20px 0;
+}
+
+footer li{
+	list-style: none;
+	color: #fff;
+}
+
 @media (max-width: 767px) {
     .sidebar-nav-fixed {
         width:auto;
     }
+    body {
+        padding-top: 0;
+    }
+    .logo{
+	padding: 0 0 0 7%;
+}
+
+footer{
+	background: #ffffff;
+}
+
 }
 
 @media (max-width: 979px) {
@@ -121,17 +166,6 @@ body {
         position:static;
         width: auto;
     }
-}
- 
- /* for demo purposes (fixed top navbar placement in the fiddle. Ok to remove */
- 
-@media (max-width: 767px) {
-    body {
-        padding-top: 0;
-    }
-}
-
-@media (max-width: 979px) {
     body {
         padding-top: 0;
     }

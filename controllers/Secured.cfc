@@ -1,10 +1,13 @@
 <cfcomponent extends="Controller" output="false">
 	
 	<cffunction name="dash">
-		<cfset number = generateSsccAsn(serialSequence='000000002', distributorId='223456')>
+		
+		<!--- TODO: Use below comment to make validate function in sscc plugin --->
+		
+		<!--- <cfset number = generateSsccAsn(serialSequence='000000002', distributorId='223456')>
 		<cfset number = right(number, 16)>
 		<cfset number = left(number, 6)>
-		<cfdump var="#right(number, 16)#" abort="true">
+		<cfdump var="#right(number, 16)#" abort="true"> --->
 		
 		<cfset pageTitle = "Social Trading">
 		<cfset user = model("user").findOne(where="id='#session.user.id#'")>
@@ -26,6 +29,11 @@
 		<cfset sFile = cffile.serverFile>
 		<cfset sFileExt = cffile.serverFileExt>
 		<cffile action="rename" source="#Path#/#sFile#" destination="#path#/#session.user.id#.#sFileExt#">
+		
+		<!--- Resize image --->
+		
+		<cfset originalSize("#path#/#session.user.id#.#sFileExt#")>
+		
 		<cfset params.user.photourl = "#session.user.id#.#sFileExt#">
 		<cfset user = model("user").findByKey(session.user.id)>
 		<cfset user.update(params.user)>
@@ -34,5 +42,8 @@
 	</cffunction>
 	
 	<cffunction name="checkRole">
+		
+		<!--- TODO: Factor roles here --->
+		
 	</cffunction>
 </cfcomponent>
