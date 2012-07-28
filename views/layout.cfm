@@ -48,12 +48,13 @@
 				<div class="span3">#linkTo(action="tos", Text="Terms")#</div>
 				<div class="span3">#linkTo(action="copyright", Text="&copy 2012 Grand Life")#</div>
 			</div>
-			<div class="row hidden-phone">
+			<div class="row hidden-phone footer-nav">
 				<div class="span3 offset3">
 					<ul>
 						<li>About Us</li>
 						<li>Contact us</li>
 						<li>Help</li>
+						<li>#linkTo(text="#imageTag("footer.png")#", controller="home", action="index")#</li>
 					</ul>
 				</div>
 				<div class="span3">
@@ -75,7 +76,8 @@
 		<cfif get("environment") is "design">
 			#javascriptIncludeTag("jquery-1.7.2.min")#
 		<cfelse>
-			#javaScriptIncludeTag("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")#
+			#javascriptIncludeTag("jquery-1.7.2.min")#
+			<!--- TODO: Uncomment for production release #javaScriptIncludeTag("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")# --->
 		</cfif>
 		#javaScriptIncludeTag("bootstrap.min")#
 		<script type="text/javascript">

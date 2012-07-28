@@ -143,6 +143,14 @@ footer li{
 	list-style: none;
 	color: #fff;
 }
+.footer-nav div:first-child{
+	position: relative;
+}
+.footer-nav div:first-child li:last-child{
+	position: absolute;
+	left: -305px;	
+	top:-32px;
+}
 
 @media (max-width: 767px) {
     .sidebar-nav-fixed {
@@ -157,6 +165,10 @@ footer li{
 
 footer{
 	background: #ffffff;
+}
+
+.footer-nav{
+	position: relative;
 }
 
 }
