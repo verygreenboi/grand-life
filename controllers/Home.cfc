@@ -72,6 +72,12 @@
 	
 	<cffunction name="login">
 		<cfset pageTitle = "Login">
+	</cffunction>
+	
+	<cffunction name="logout">
+		<cfif structKeyExists(session, "user")>
+			
+		</cfif>
 	</cffunction>	
 	
 
