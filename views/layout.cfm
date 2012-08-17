@@ -8,10 +8,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <meta name="description" content="">
 	    <meta name="author" content="">
-		#stylesheetLinkTag("bootstrap")#
-		#stylesheetLinkTag("bootstrap-responsive")#
-		#stylesheetLinkTag("app")#
-		#stylesheetLinkTag("http://fonts.googleapis.com/css?family=Droid+Sans")#
+		#stylesheetLinkTag("bootstrap, bootstrap-responsive, responsiveslides, app, http://fonts.googleapis.com/css?family=Droid+Sans")#
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	    <!--[if lt IE 9]>
 	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,28 +17,42 @@
 	<body>
 		<header>
 			#includePartial("/partials/nav")#
-			<section class="container">
-			<div class="content-inner">
-		    	<div class="logo">
-				  <h1 id="logo" class="pump-up">Grand life social trading site.</h1>
-				  <p>One light, one goal, one mind, unlimited possibilities!</p>
-				</div>
-					<cfif params.controller eq "home" and params.action eq "index">
-						#includePartial("/partials/topsearch")#
-					</cfif>
-					</div>
-			</section>
 		</header>
-		
+        
+        <div class="container">
+        <section id="banner">
+            <div class="content-inner">
+                <div class="logo">
+                  <h1 id="logo" class="pump-up">Grand life social trading site.</h1>
+                  <p>One light, one goal, one mind, unlimited possibilities!</p>
+                </div>
+             </div>
+        </section>
+        
+        <section id="search">
+        
+        	<cfif params.controller eq "home" and params.action eq "index">
+                #includePartial("/partials/topsearch")#
+            </cfif>
+        
+        </section>
+
 		<!--- Main content --->
-		<section class="container-fluid">
+		<section id="content-top">
 			<div class="row-fluid">
-				#includeContent()#
-				<div class="span3 well visible-desktop">
-					<h4>Trending Sales</h4>
-				</div>
+				<cfif params.controller eq "home" and params.action eq "index">
+                	#includePartial("/partials/videoPlayer")#              
+                    <div class="span3 well hidden-phone">
+                        <h4>Trending Sales</h4>
+                    </div>
+            </div>        
+                    #includeContent()#
+                <cfelse>                	                  
 			</div>
+            #includeContent()# 
+            </cfif> 
 		</section>
+        </div>
 		<footer class="container-fluid">
 			<div class="row visible-phone">
 				<div class="span3">#linkTo(action="login", text="Sign In")#</div>
@@ -72,14 +83,15 @@
 				</div>
 			</div>
 		</footer>
-		
+        
+
 		<cfif get("environment") is "design">
 			#javascriptIncludeTag("jquery-1.7.2.min")#
 		<cfelse>
 			#javascriptIncludeTag("jquery-1.7.2.min")#
 			<!--- TODO: Uncomment for production release #javaScriptIncludeTag("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")# --->
 		</cfif>
-		#javaScriptIncludeTag("bootstrap.min")#
+		#javaScriptIncludeTag("bootstrap.min, responsiveslides.min, app")#
 		<script type="text/javascript">
 		  $(document).ready(function(){
 				$('input').hover(function()
